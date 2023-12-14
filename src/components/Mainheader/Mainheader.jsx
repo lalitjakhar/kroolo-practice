@@ -9,7 +9,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import AddCircleTwoToneIcon from "@mui/icons-material/AddCircleTwoTone";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
@@ -19,6 +18,7 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import Kroolologo from "../../../public/kroolologo.svg";
+import Drawerlogo from "../../../public/iconbutton.svg";
 
 const drawerWidth = 240;
 
@@ -109,7 +109,6 @@ export default function Mainheader() {
       <AppBar position="fixed" open={open} style={{ background: "white" }}>
         <Toolbar>
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
@@ -118,13 +117,15 @@ export default function Mainheader() {
               ...(open && { display: "none" }),
             }}
           >
-            <AddCircleTwoToneIcon sx={{ color: "black" }} />
+            <img src={Drawerlogo} alt="Drawerlogo" style={{ height: 30 }} />
           </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          {open && <Logo src={Kroolologo} alt="Logo" />}
+          {open && (
+            <Logo src={Kroolologo} alt="Logo" style={{ padding: "3px" }} />
+          )}
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
