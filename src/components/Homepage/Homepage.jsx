@@ -1,10 +1,10 @@
 import React from 'react'
-import MiniDrawer from '../Mainheader/Mainheader'
+import Mainheader from '../Mainheader/Mainheader'
 
 const Homepage = () => {
   return (
     <>
-        <MiniDrawer />
+        <Mainheader />
     </>
   )
 }
